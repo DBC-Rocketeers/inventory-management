@@ -1,0 +1,8 @@
+
+<%= form_for :order, method: (:post) do |f| %>
+  <%= f.collection_select(location_list) %>
+  <%= f.text_field :field %>
+  <%= f.text_field :field %>
+  <%= f.text_field :field %>
+  <%= f.submit 'Place Order' %>
+<% end %>
