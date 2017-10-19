@@ -187,11 +187,15 @@
         1,
         null
       ],
+      "/Users/apprentice/Desktop/inventory-management/app/helpers/parts_helper.rb": [
+        1,
+        null
+      ],
       "/Users/apprentice/Desktop/inventory-management/app/helpers/warehouses_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/inventory-management/app/controllers/warehouses_controller.rb": [
+      "/Users/apprentice/Desktop/inventory-management/app/controllers/parts_controller.rb": [
         1,
         null,
         1,
@@ -201,6 +205,35 @@
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/inventory-management/spec/controllers/warehouses_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/inventory-management/app/controllers/warehouses_controller.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/inventory-management/spec/helpers/parts_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         1,
         null
@@ -244,7 +277,23 @@
         1,
         null,
         1,
+        null,
+        4,
+        4,
+        4,
+        null,
+        null,
         1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/app/models/part.rb": [
@@ -253,7 +302,7 @@
         1,
         null,
         1,
-        0,
+        3,
         null,
         null
       ],
@@ -271,6 +320,6 @@
         null
       ]
     },
-    "timestamp": 1508434879
+    "timestamp": 1508436803
   }
 }

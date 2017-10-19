@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :warehouses, only: [:index]
+  resources :parts, only: [:index]
 end
