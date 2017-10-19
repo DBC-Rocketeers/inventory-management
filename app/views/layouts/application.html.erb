@@ -9,10 +9,24 @@
   </head>
 
   <body>
-    <% if current_employee %>
-      Signed in as <%= current_employee.name %> | <%= link_to "Logout", '/logout' %>
-    <% end %>
-    
+    <header>
+        <div class="header">
+          <h1>Rutherford Rocket Labs</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">request</a></li>
+            <li><a href="#">receive</a></li>
+            <li><a href="#">register</a></li>
+            <% if current_employee %>
+            <li>
+            Signed in as <%= current_employee.name %> | <%= link_to "Logout", '/logout' %>
+            </li>
+            <% end %>
+          </ul>
+        </nav>
+    </header>
+
     <%= render "shared/flash" %>
 
     <%= yield %>
