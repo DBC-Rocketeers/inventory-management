@@ -30,11 +30,15 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# gem 'simplecov'
-  # Load and launch SimpleCov at the very top of your test/test_helper.rb (or spec_helper.rb, rails_helper, cucumber env.rb, or whatever your preferred test framework uses):
-    # require 'simplecov'
-    # SimpleCov.start
-gem 'simplecov', :require => false, :group => :test
+group :test do
+  gem 'simplecov', require: false
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'poltergeist'
+
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

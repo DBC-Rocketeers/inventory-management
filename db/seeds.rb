@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+seattle = Warehouse.create(name: "Seattle")
+
+seattle.parts << Part.create(name: "Nose Cone", number: 1234)
+seattle.parts << Part.create(name: "Flux capacitor", number: 2345)
+seattle.parts << Part.create(name: "Oxidizer", number: 3456)
+seattle.parts << Part.create(name: "Fuel Pump", number: 4567)
