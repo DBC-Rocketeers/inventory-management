@@ -251,6 +251,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/spec/models/warehouse_spec.rb": [
@@ -267,6 +271,6 @@
         null
       ]
     },
-    "timestamp": 1508380596
+    "timestamp": 1508434879
   }
 }

@@ -12,7 +12,7 @@
       <tr class="inventory-tr">
         <th class="inventory-th"><%= part.name %></th>
         <th class="inventory-th"><%= part.number %></th>
-        <th class="inventory-th"><%= Part.where(name: part.name).count %></th>
+        <th class="inventory-th"><%= part.global_count %></th>
       </tr>
     <% end %>
   </table>
