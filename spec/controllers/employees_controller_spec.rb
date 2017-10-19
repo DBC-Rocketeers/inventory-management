@@ -38,5 +38,10 @@ RSpec.describe EmployeesController, type: :controller do
       post :create, { params: { employee: { name: 'Admin', admin: true, employee_id: 1, password: 'password' } } }
       expect(response).to render_template(:create)
     end
+
+    it 'sets a flash notice upon failure' do
+      post :create, { params: { employee: {admin: true, employee_id: 1, password: '' } } }
+      expect(flash[:alert]).to match ["Name can't be blank", "Employee has already been taken", "Password can't be blank"]
+    end
   end
 end
