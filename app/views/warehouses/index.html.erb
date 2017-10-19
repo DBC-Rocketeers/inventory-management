@@ -1,6 +1,19 @@
-<h2 class="inv-index-header">Inventory</h2>
-<ul>
-  <% @inventory.each do |part| %>
-    <li><%= part.name %></li>
-  <% end %>
-</ul>
+
+<div class="list-container warehouse-container">
+  <h2 class="warehouse-index-header">Inventory</h2>
+
+  <table class="inventory-table">
+    <tr>
+        <th>Part Name</th>
+        <th>Part Number</th>
+        <th>Quantity</th>
+    </tr>
+    <% @inventory.each do |part| %>
+      <tr class="inventory-tr">
+        <th class="inventory-th"><%= part.name %></th>
+        <th class="inventory-th"><%= part.number %></th>
+        <th class="inventory-th"><%= Part.where(name: part.name).count %></th>
+      </tr>
+    <% end %>
+  </table>
+</div>
