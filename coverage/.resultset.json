@@ -186,6 +186,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/app/helpers/application_helper.rb": [
@@ -237,12 +238,12 @@
         1,
         null,
         1,
-        11,
+        14,
         null,
         1,
         null,
         1,
-        11,
+        14,
         null,
         null
       ],
@@ -255,7 +256,10 @@
         3,
         null,
         3,
+        3,
         null,
+        3,
+        3,
         3,
         3,
         3,
@@ -283,7 +287,7 @@
         1,
         1,
         1,
-        15,
+        21,
         null,
         null,
         null
@@ -372,11 +376,61 @@
         1,
         null,
         1,
+        1,
+        6,
+        6,
+        null,
+        6,
+        6,
+        null,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
         null,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/app/controllers/warehouses_controller.rb": [
         1,
+        1,
+        1,
+        3,
+        null,
         null,
         null
       ],
@@ -394,7 +448,6 @@
         null,
         null,
         1,
-        1,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/spec/helpers/parts_helper_spec.rb": [
@@ -410,7 +463,6 @@
         null,
         null,
         null,
-        1,
         1,
         null
       ],
@@ -428,7 +480,6 @@
         null,
         null,
         1,
-        1,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/spec/helpers/warehouses_helper_spec.rb": [
@@ -445,13 +496,11 @@
         null,
         null,
         1,
-        1,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/spec/models/employee_spec.rb": [
         1,
         null,
-        1,
         1,
         null
       ],
@@ -471,7 +520,6 @@
       "/Users/apprentice/Desktop/inventory-management/spec/models/inventory_spec.rb": [
         1,
         null,
-        1,
         1,
         null
       ],
@@ -518,7 +566,6 @@
         1,
         null,
         1,
-        1,
         null
       ],
       "/Users/apprentice/Desktop/inventory-management/app/models/warehouse.rb": [
@@ -528,6 +575,6 @@
         null
       ]
     },
-    "timestamp": 1508441882
+    "timestamp": 1508445676
   }
 }
