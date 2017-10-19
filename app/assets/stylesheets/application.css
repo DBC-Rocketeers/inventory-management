@@ -20,7 +20,7 @@
 .employee-input {
   background: #e8eaf6;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 400px;
   max-width: 400px;
   margin: 0 auto;
   grid-gap: 20px;
