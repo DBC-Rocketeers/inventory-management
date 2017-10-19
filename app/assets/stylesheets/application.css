@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- /*body {
+ body {
    background: whitesmoke;
  }
 
@@ -34,4 +34,4 @@
   line-height: 2.2rem;
   border-radius: 5px;
   border: none;
-}*/
+}
