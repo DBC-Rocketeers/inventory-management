@@ -40,3 +40,21 @@
   font-family: helvetica;
   margin: auto;
 }
+
+.flash-box{
+  margin: 20px auto;
+  width: 600px;
+  min-height: 70px;
+}
+.flash-box.notice{
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: #d6e9c6 2px solid;
+  border-radius: 10px;
+}
+.flash-box.alert{
+  color: #a94442;
+  background-color: #f2dede;
+  border: #ebccd1 2px solid;
+  border-radius: 10px;
+}

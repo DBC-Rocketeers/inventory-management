@@ -1,0 +1,6 @@
+<%= form_for :employee, html: { class: "employee-input" } do |f| %>
+  <h2>Login</h2>
+  <%= f.text_field :employee_id, placeholder: "employee id" %>
+  <%= f.password_field :password, placeholder: "password" %>
+  <%= f.submit 'login', class: "submit-class-name-here" %>
+<% end %>

@@ -1,20 +1,19 @@
 class EmployeesController < ApplicationController
-
-
-  def show
-    @employee = Employee.find(params[:id])
-  end
+  before_action :authorize
 
   def create
-    @employee = Employee.create(employee_params)
-    # redirect_to employee_path(@employee)
-    @employee
+    @employee = Employee.new(employee_params)
+    if @employee.save
+      flash[:notice] = ["You have successfully added new employee, #{@employee.name}."]
+      @employee
+    else
+      flash[:alert] = @employee.errors.full_messages
+    end
   end
 
   def new
     @employee = Employee.new
   end
-
 
   private
   def employee_params
