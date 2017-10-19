@@ -8,7 +8,7 @@ RSpec.describe Part, type: :model do
     let!(:flux) { Part.create(name: "Flux capacitor", number: 2345) }
 
 
-  describe "methods" do
+  xdescribe "methods" do
     it 'it returns the global count of multiple parts' do
       expect(nose.global_count).to eq 2
     end

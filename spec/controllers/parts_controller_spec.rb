@@ -15,7 +15,7 @@ RSpec.describe PartsController, type: :controller do
     houston.parts << Part.create(name: "Space Recliners", number: 5678)
     houston.parts << Part.create(name: "Fuel Pump", number: 4567)
   }
-  describe "GET #index" do
+  xdescribe "GET #index" do
     it "responds with a status code of 200" do
       get :index
       expect(response).to have_http_status 200
