@@ -11,13 +11,15 @@
   <body>
     <header>
         <div class="header">
+         <%= image_tag "rrl_logo.svg" %>
           <h1>Rutherford Rocket Labs</h1>
         </div>
         <nav>
           <ul>
-            <li><a href="#">request</a></li>
-            <li><a href="#">receive</a></li>
-            <li><a href="#">register</a></li>
+            <!-- <li><a href="#">request</a></li>
+            <li><a href="#">receive</a></li> -->
+            <li><a href="/">inventory</a></li>
+            <li><a href="/employees/new">register</a></li>
             <% if current_employee %>
             <li>
             Signed in as <%= current_employee.name %> | <%= link_to "Logout", '/logout' %>

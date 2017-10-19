@@ -62,13 +62,16 @@
 }
 
 header{
-  background: black;
-  line-height: 70px;
+  background: #2be6aa;
+  line-height: 90px;
   display: grid;
   grid-template-columns: 1fr 480px 480px 1fr;
+  margin-bottom: 50px;
 }
 header .header{
   grid-column: 2;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 header h1{
   color: white;
@@ -87,4 +90,8 @@ header li {
 header a{
   text-decoration: none;
   color: white;
+}
+img{
+  height: 80px;
+
 }
