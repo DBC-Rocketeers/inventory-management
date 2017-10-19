@@ -1,0 +1,6 @@
+<h2 class="inv-index-header">Inventory</h2>
+<ul>
+  <% @inventory.each do |part| %>
+    <li><%= part.name %></li>
+  <% end %>
+</ul>
