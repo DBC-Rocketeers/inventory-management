@@ -3,5 +3,5 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+Employee.create(name: 'Admin', admin: true, employee_id: 1, password: 'password')
 #   Character.create(name: 'Luke', movie: movies.first)
