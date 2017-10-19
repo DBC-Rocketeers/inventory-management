@@ -1,0 +1,9 @@
+<% flash.each do |name, msgs| -%>
+  <div class="<%= name %> flash-box">
+    <% msgs.each do |msg|%>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+    <% end %>
+  </div>
+<% end %>

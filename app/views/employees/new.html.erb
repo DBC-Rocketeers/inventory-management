@@ -1,0 +1,11 @@
+<%= form_for :employee, html: { class: "employee-input" }, url: employees_path do |f| %>
+  <h2>Register an Employee</h2>
+  <%= f.text_field :name, placeholder: "name " %>
+  <%= f.text_field :employee_id, placeholder: "employee id" %>
+  <%= f.password_field :password, placeholder: "password" %>
+  <div class="">
+    <%= f.check_box :admin, id: "checkbox_id" %>
+    <label for="checkbox_id">Admin?</label>
+  </div>
+  <%= f.submit 'add employee', class: "submit-class-name-here" %>
+<% end %>
