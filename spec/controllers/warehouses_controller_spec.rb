@@ -34,17 +34,17 @@ RSpec.describe WarehousesController, type: :controller do
 
   describe "GET #show" do
     it "responds with a status code of 200" do
-      get :show, { id: 1}
+      get :show, { params: { id: 1 } }
       expect(response).to have_http_status 200
     end
 
     it "assigns the entire inventory of warehouses as @inventory" do
-      get :show, { id: 1}
-      expect(assigns(:warehouses).count).to be 4
+      get :show, { params: { id: 1 } }
+      expect(assigns(:inventory).count).to be 4
     end
 
     it "renders the index template" do
-      get :show, { id: 1}
+      get :show, { params: { id: 1 } }
       expect(response).to render_template(:show)
     end
   end

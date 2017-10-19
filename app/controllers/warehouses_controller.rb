@@ -4,4 +4,7 @@ class WarehousesController < ApplicationController
     @warehouses = Warehouse.all
   end
 
+  def show
+    @inventory = Warehouse.find(params[:id]).parts.uniq
+  end
 end
