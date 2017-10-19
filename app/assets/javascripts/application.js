@@ -12,3 +12,15 @@
 //
 //= require rails-ujs
 //= require_tree .
+
+$(()=> {
+  $(".burger-container").on("click", () => {
+    $(".top").toggleClass("bar-top")
+    $(".middle").toggleClass("bar-middle")
+    $(".bottom").toggleClass("bar-bottom")
+    $(".nav-wrap").toggleClass("slide")
+  })
+
+
+
+})

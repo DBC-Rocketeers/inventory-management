@@ -5,32 +5,42 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <header>
-        <div class="header">
-         <%= image_tag "rrl_logo.svg" %>
-          <h1>Rutherford Rocket Labs</h1>
+    <div class="header">
+     <%= image_tag "rrl_logo.svg", class: "logo" %>
+     <h1>Rutherford Rocket Labs</h1>
+     <% if current_employee %>
+      <li class="menu-link logged-in-tag">Logged in as <%= current_employee.name %></li>
+     <% end %>
+      <div class="burger-container">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+      </div>
+    </div>
+      <div class="nav-wrap">
+        <div class="nav-menu-sidebar">
+            <ul class="nav-list">
+              <!-- <li><a href="#">request</a></li>
+              <li><a href="#">receive</a></li> -->
+              <li><a class="menu-link" href="/">Inventory</a></li>
+              <li><a class="menu-link" href="/employees/new">Register</a></li>
+              <% if current_employee %>
+              <li><%= link_to "Logout", '/logout', class: "menu-link logout-link" %></li>
+              <% end %>
+            </ul>
         </div>
-        <nav>
-          <ul>
-            <!-- <li><a href="#">request</a></li>
-            <li><a href="#">receive</a></li> -->
-            <li><a href="/">inventory</a></li>
-            <li><a href="/employees/new">register</a></li>
-            <% if current_employee %>
-            <li>
-            Signed in as <%= current_employee.name %> | <%= link_to "Logout", '/logout' %>
-            </li>
-            <% end %>
-          </ul>
-        </nav>
-    </header>
-
-    <%= render "shared/flash" %>
-
-    <%= yield %>
+    </div>
+    <div class='main'>
+      <%= render "shared/flash" %>
+      <%= yield %>
+    <div>
   </body>
 </html>
