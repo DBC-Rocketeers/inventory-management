@@ -12,7 +12,6 @@
     <% if current_employee %>
       Signed in as <%= current_employee.name %> | <%= link_to "Logout", '/logout' %>
     <% end %>
-    
     <%= render "shared/flash" %>
 
     <%= yield %>
