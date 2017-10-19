@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       flash[:notice] = ["You have successfully logged in."]
       redirect_to '/'
     else
-      flash[:alert] = ["Your employee ID / password not matching."]
+      flash[:alert] = ["Your employee ID or password combination are incorrect."]
       redirect_to '/login'
     end
   end
