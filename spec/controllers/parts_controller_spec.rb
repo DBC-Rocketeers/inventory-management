@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe PartsController, type: :controller do
   before(:each) {
+    Employee.create(name: 'Admin', admin: true, employee_id: 1, password: 'password')
+    session[:employee_id] = 1
     seattle = Warehouse.create(name: "Seattle")
 
     seattle.parts << Part.create(name: "Nose Cone", number: 1234)
