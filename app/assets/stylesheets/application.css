@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   background: whitesmoke;
+ }
+
+.employee-input {
+  background: #e8eaf6;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 400px;
+  margin: 0 auto;
+  grid-gap: 20px;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.employee-input input {
+  font-size: 1em;
+  padding: 0 1rem;
+  line-height: 2.2rem;
+  border-radius: 5px;
+  border: none;
+}

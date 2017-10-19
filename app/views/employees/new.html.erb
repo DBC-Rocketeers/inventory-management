@@ -1,6 +1,6 @@
-<%= form_for :employee do |f| %>
+<%= form_for :employee, html: { class: "employee-input" } do |f| %>
   <%= f.text_field :name, placeholder: "name " %>
   <%= f.text_field :employee_id, placeholder: "employee id" %>
   <%= f.password_field :password, placeholder: "password" %>
-  <%= f.submit %>
+  <%= f.submit 'add employee', class: "submit-class-name-here" %>
 <% end %>
