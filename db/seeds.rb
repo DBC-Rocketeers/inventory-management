@@ -5,3 +5,12 @@
 #
 Employee.create(name: 'Admin', admin: true, employee_id: 1, password: 'password')
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+seattle = Warehouse.create(name: "Seattle")
+
+seattle.parts << Part.create(name: "Nose Cone", number: 1234)
+seattle.parts << Part.create(name: "Nose Cone", number: 1234)
+seattle.parts << Part.create(name: "Flux capacitor", number: 2345)
+seattle.parts << Part.create(name: "Oxidizer", number: 3456)
+seattle.parts << Part.create(name: "Fuel Pump", number: 4567)
