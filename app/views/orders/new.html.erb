@@ -1,8 +1,6 @@
 
-<%= form_for :order, method: (:post) do |f| %>
-  <%= f.collection_select(location_list) %>
-  <%= f.text_field :field %>
-  <%= f.text_field :field %>
-  <%= f.text_field :field %>
+<%= form_for :warehouse, method: (:post) do |f| %>
+  <%= f.collection_select :name, @warehouse, :id, :name %>
+
   <%= f.submit 'Place Order' %>
 <% end %>
