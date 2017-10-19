@@ -35,3 +35,8 @@
   border-radius: 5px;
   border: none;
 }
+
+.employee-input h2 {
+  font-family: helvetica;
+  margin: auto;
+}
