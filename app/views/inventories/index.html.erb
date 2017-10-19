@@ -8,11 +8,11 @@
         <th>Part Number</th>
         <th>Quantity</th>
     </tr>
-    <% @inventory.each do |part| %>
+    <% @inventory.each do |entry| %>
       <tr class="inventory-tr">
-        <th class="inventory-th"><%= part.name %></th>
-        <th class="inventory-th"><%= part.number %></th>
-        <th class="inventory-th"><%= part.global_count %></th>
+        <th class="inventory-th"><%= entry.part.name %></th>
+        <th class="inventory-th"><%= entry.part.number %></th>
+        <th class="inventory-th"><%= entry.global_count %></th>
       </tr>
     <% end %>
   </table>

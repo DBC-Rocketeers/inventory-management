@@ -2,7 +2,10 @@ class Part < ApplicationRecord
   has_many :inventories
   has_many :warehouses, through: :inventories
 
-  def global_count
-    Part.where(name: self.name).count
+  def local_count(location)
+    warehouse = Warehouse.find_by(name: location)
+    parts = warehouse.parts
+    parts_with_same_name = parts.where(name: self.name)
+    parts_with_same_name.count
   end
 end

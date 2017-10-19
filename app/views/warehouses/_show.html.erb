@@ -1,19 +1,15 @@
 
-<div class="list-container warehouse-container">
-  <h2 class="warehouse-index-header">Inventory</h2>
-
   <table class="inventory-table">
     <tr>
         <th>Part Name</th>
         <th>Part Number</th>
         <th>Quantity</th>
     </tr>
-    <% @inventory.each do |part| %>
+    <% inventory.each do |part| %>
       <tr class="inventory-tr">
         <th class="inventory-th"><%= part.name %></th>
         <th class="inventory-th"><%= part.number %></th>
-        <th class="inventory-th"><%= part.global_count %></th>
+        <th class="inventory-th"><%= part.local_count(location) %></th>
       </tr>
     <% end %>
   </table>
-</div>
