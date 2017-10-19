@@ -4,9 +4,7 @@ class WarehousesController < ApplicationController
     @inventory = []
     Warehouse.all.each do |warehouse|
       warehouse.parts.each do |part|
-        p part
         @inventory << part
-        p @inventory
       end
     end
     @inventory

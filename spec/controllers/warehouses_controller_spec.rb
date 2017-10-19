@@ -14,10 +14,15 @@ RSpec.describe WarehousesController, type: :controller do
       get :index
       expect(response).to have_http_status 200
     end
+
     it "assigns the entire inventory as @inventory" do
       get :index
       expect(assigns(:inventory).count).to be 4
     end
-    it "renders the index template"
+
+    it "renders the index template" do
+      get :index
+      expect(response).to render_template(:index)
+    end
   end
 end
