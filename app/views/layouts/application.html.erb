@@ -11,18 +11,10 @@
   <body>
     <% if current_employee %>
       Signed in as <%= current_employee.name %> | <%= link_to "Logout", '/logout' %>
-    <% else %>
-      <%= link_to 'Login', '/login' %>
     <% end %>
-    <% flash.each do |name, msgs| -%>
-      <div class="<%= name %> flash-box">
-        <% msgs.each do |msg|%>
-        <ul>
-          <li><%= msg %></li>
-        </ul>
-        <% end %>
-      </div>
-    <% end -%>
+    
+    <%= render "shared/flash" %>
+
     <%= yield %>
   </body>
 </html>
