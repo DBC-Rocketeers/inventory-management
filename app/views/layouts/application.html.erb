@@ -14,7 +14,7 @@
 
   <body>
     <div class="header">
-     <%= image_tag "rrl_logo.svg", class: "logo" %>
+      <a href="/"><%= image_tag "rrl_logo.svg", class: "logo" %></a>
      <h1>Rutherford Rocket Labs</h1>
      <% if current_employee %>
       <li class="menu-link logged-in-tag">Logged in as <%= current_employee.name %></li>
