@@ -6,7 +6,7 @@
   width: 100%;
   height: 100vh;
   background-color: white;
-  box-shadow: 0 0 15px darkgrey;
+  box-shadow: 0 0 15px var(--shadow);
 }
 
 .list-container {
@@ -22,7 +22,7 @@
 }
 
 .header-th {
-  padding-bottom: 10px;
+  padding: 10px 5px;
 }
 
 .inventory-table, .inventory-th {
@@ -36,12 +36,10 @@ tr {
 
 .header-row {
   border-top: none;
+  background-color: #28ABFC;
 }
 
 .inventory-th {
-  // box-shadow:
-  //       inset 0px 11px 8px -10px grey,
-  //       inset 0px -11px 8px -10px grey;
   line-height: 40px;
 }
 
@@ -64,6 +62,8 @@ tr {
     .header-row {
       font-size: 1em;
     }
+
+    tr:nth-child(even) {background-color: powderblue}
 
 
 }
