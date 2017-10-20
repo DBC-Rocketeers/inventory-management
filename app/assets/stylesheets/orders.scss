@@ -1,3 +1,32 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.order-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.order-container h2 {
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.order-container label {
+  display: block;
+  margin-top: 10px;
+}
+
+.order-container input {
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  margin: 5px 0;
+}
+
+.order-container input[type=submit] {
+  box-sizing: border-box;
+  margin-top: 30px;
+  width: 50%;
+  fill: blue;
+}

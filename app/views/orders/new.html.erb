@@ -1,6 +1,12 @@
-
+<div class="clipboard">
+  <div class="order-container">
+  <h2>Place an Order</h2>
+  <div class="list-container">
 <%= form_for :order, url: orders_path do |f| %>
   <label for="">Warehouse Location:</label>
   <%= f.collection_select :name, @warehouse, :name, :name %>
   <%= f.submit 'Start Order' %>
 <% end %>
+  </div>
+  </div>
+</div>
