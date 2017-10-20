@@ -10,7 +10,12 @@ class WarehousesController < ApplicationController
 
   def create
     @warehouse = Warehouse.new(warehouse_params)
-    redirect_to warehouses_route
+    if @warehouse.save
+      flash[:notice] = ["You have successfully added new warehouse in #{@warehouse.name}."]
+      redirect_to warehouses_path
+    else
+      flash[:alert] = @warehouse.errors.full_messages
+    end
   end
 
 
@@ -20,7 +25,7 @@ class WarehousesController < ApplicationController
 
   private
   def warehouse_params
-    params(:warehouse).permit(:name)
+    params.require(:warehouse).permit(:name)
   end
 
 end
