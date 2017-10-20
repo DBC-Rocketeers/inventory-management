@@ -43,10 +43,10 @@ RSpec.describe WarehousesController, type: :controller do
       expect(assigns(:warehouse)).to be_a Warehouse
     end
 
-    # it "renders the new template" do
-    #   get :new
-    #   expect(response).to render_template(:new)
-    # end
+    it "renders the new template" do
+      get :new
+      expect(response).to render_template(:new)
+    end
   end
 
 
