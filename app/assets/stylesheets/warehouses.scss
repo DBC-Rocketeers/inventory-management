@@ -1,10 +1,11 @@
 // Place all the styles related to the warehouses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.warehouse-container {
-  border: 1px solid black;
-  border-radius: 5px;
-}
+
+// .warehouse-index-header-individual {
+//   display: block;
+//   padding-left: 5%;
+// }
 
 
 .warehouse-index-header {
@@ -12,7 +13,8 @@
 }
 
 .inventory-table {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .inventory-th {
