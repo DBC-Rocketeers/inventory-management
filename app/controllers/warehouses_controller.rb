@@ -5,6 +5,7 @@ class WarehousesController < ApplicationController
   end
 
   def new
+    @warehouse = Warehouse.new
   end
 
   def create
@@ -21,5 +22,5 @@ class WarehousesController < ApplicationController
   def warehouse_params
     params(:warehouse).permit(:name)
   end
-  
+
 end

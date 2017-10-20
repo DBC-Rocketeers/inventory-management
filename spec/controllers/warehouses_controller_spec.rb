@@ -37,12 +37,12 @@ RSpec.describe WarehousesController, type: :controller do
       get :new
       expect(response).to have_http_status 200
     end
-    #
-    # it "creates an instance of employee" do
-    #   get :new
-    #   expect(assigns(:employee)).to be_a Employee
-    # end
-    #
+
+    it "creates an instance of warehouse" do
+      get :new
+      expect(assigns(:warehouse)).to be_a Warehouse
+    end
+
     # it "renders the new template" do
     #   get :new
     #   expect(response).to render_template(:new)
