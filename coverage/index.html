@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T00:55:52-07:00">2017-10-20T00:55:52-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T01:00:25-07:00">2017-10-20T01:00:25-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.7%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.67
+         1.69
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>47</b> files in total.
-    <b>334</b> relevant lines. 
-    <span class="green"><b>333</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>337</b> relevant lines. 
+    <span class="green"><b>337</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -212,12 +212,12 @@
       
       <tr>
         <td class="strong"><a href="#7e5d651be30aea2380c42ed158b6eda8b704cc01" class="src_link" title="app/models/order.rb">app/models/order.rb</a></td>
-        <td class="yellow strong">88.89 %</td>
+        <td class="green strong">100.0 %</td>
         <td>14</td>
         <td>9</td>
-        <td>8</td>
-        <td>1</td>
-        <td>1.8</td>
+        <td>9</td>
+        <td>0</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -493,11 +493,11 @@
       <tr>
         <td class="strong"><a href="#e36fba5ac0c9b51a10df03d09e0b3d04fcb4994a" class="src_link" title="spec/models/order_spec.rb">spec/models/order_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
-        <td>7</td>
-        <td>7</td>
+        <td>16</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -1641,11 +1641,11 @@
         <div class="source_table" id="7e5d651be30aea2380c42ed158b6eda8b704cc01">
   <div class="header">
     <h3>app/models/order.rb</h3>
-    <h4><span class="yellow">88.89 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1682,20 +1682,20 @@
           <code class="ruby">  def add_entry(name, number, quantity)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    part = Part.find_by(number: number)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="7">
+          <span class="hits">4</span>
           
           <code class="ruby">    if part</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
           <code class="ruby">      Entry.create(order: self, part: part, ordered_quantity: quantity)</code>
         </li>
@@ -4995,8 +4995,8 @@
     <h3>spec/models/order_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5022,49 +5022,79 @@
           <code class="ruby">RSpec.describe Order, type: :model do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">  let!(:warehouse) { Warehouse.create!(name: &quot;Seattle&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
-          <code class="ruby">  let!(:order) { Order.create!(warehouse_id: 1) }</code>
+          <code class="ruby">  let!(:part) { Part.create!(name: &quot;Flux capacitor&quot;, number: 2345) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
-          <code class="ruby">  describe &#39;methods&#39; do</code>
+          <code class="ruby">  let!(:order) { Order.create!(warehouse_id: 1) }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
+          <code class="ruby">  describe &#39;methods&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
           <code class="ruby">    it &quot;creates a new entry&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
+        <li class="covered" data-hits="4" data-linenumber="9">
           <span class="hits">4</span>
           
           <code class="ruby">      expect{ order.add_entry(&quot;Nose Cone&quot;, 1234, 2) }.to change{ order.entries.count }.by 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;creates a new entry when a part already exists&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="13">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      expect{ order.add_entry(&quot;Flux capacitor&quot;, 2345, 1) }.to change{ order.entries.count }.by 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
