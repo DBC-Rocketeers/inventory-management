@@ -256,6 +256,29 @@
         1,
         null,
         1,
+        1,
+        3,
+        3,
+        null,
+        3,
+        3,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -263,8 +286,7 @@
         1,
         null,
         1,
-        0,
-        0,
+        3,
         null,
         null,
         null
@@ -560,6 +582,19 @@
         1,
         null
       ],
+      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/entry_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/entry.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/inventory_spec.rb": [
         1,
         null,
@@ -611,6 +646,8 @@
       ],
       "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/order.rb": [
         1,
+        1,
+        1,
         null
       ],
       "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/part_spec.rb": [
@@ -652,6 +689,7 @@
         null
       ],
       "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/part.rb": [
+        1,
         1,
         1,
         1,
@@ -697,6 +735,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         3,
@@ -704,6 +743,6 @@
         null
       ]
     },
-    "timestamp": 1508464810
+    "timestamp": 1508472002
   }
 }
