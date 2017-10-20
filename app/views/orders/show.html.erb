@@ -1,0 +1,5 @@
+<h3>Order #<%= @order.id %> </h3>
+<p><%= @order.warehouse.name %></p>
+<% @order.entries.each do |entry| %>
+<p><%= entry.part.name %> - <%= entry.ordered_quantity %> </p>
+<% end %>
