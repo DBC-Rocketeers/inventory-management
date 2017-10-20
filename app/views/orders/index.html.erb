@@ -1,4 +1,5 @@
 <% @orders.each do |order| %>
-<p>Order ID: <%= order.id %></p>
+<h4><%= link_to "order ##{order.id}", order %></h4>
+
 
 <% end %>

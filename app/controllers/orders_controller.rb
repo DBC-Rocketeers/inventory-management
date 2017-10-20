@@ -9,4 +9,9 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
+  def show
+    p params
+    @order = Order.find(params[:id])
+  end
+
 end
