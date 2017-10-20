@@ -23,6 +23,10 @@
    width: 100%;
  }
 
+ li {
+   list-style: none;
+ }
+
  .main {
    width: 90%;
    max-width: 650px;
@@ -65,7 +69,8 @@ input[type=submit] {
 
 .flash-box{
   margin: 20px auto;
-  width: 600px;
+  width: 90%;
+  max-width: 300px;
   min-height: 70px;
 }
 .flash-box.notice{
@@ -186,9 +191,6 @@ img{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-  body {
-    background-color: blue;
-  }
 
   .title-name,
   .log-large {
