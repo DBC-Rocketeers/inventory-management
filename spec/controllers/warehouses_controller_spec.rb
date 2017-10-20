@@ -50,6 +50,17 @@ RSpec.describe WarehousesController, type: :controller do
   end
 
 
+  describe "POST #create" do
+    it "responds with a status code of 302" do
+      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      expect(response).to have_http_status 302
+    end
+  end
+
+
+
+
+
   describe "GET #show" do
     it "responds with a status code of 200" do
       get :show, { params: { id: 1 } }
