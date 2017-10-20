@@ -47,13 +47,20 @@ RSpec.describe OrdersController, type: :controller do
   end
 
   describe 'PUT #update' do
+    it 'sets order to submitted' do
+      put :update, { params: { id: 1, commit: "Submit Order", entry: { part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } } }
+      order = Order.find(1)
+      expect(order.submitted).to be true
+    end
+
+
     it "returns a 302 status" do
-      put :update, { params: { id: 1, name: "Nose Cone", number: 1234, ordered_quantity: 2 } }
+      put :update, { params: { id: 1, entry: { part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } } }
       expect(response).to have_http_status 302
     end
 
     it 'takes params to create an entry' do
-      put :update, { params: { id: 1, part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } }
+      put :update, { params: { id: 1, entry: { part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } } }
       order = Order.find(1)
       expect(order.entries.count).to eq 1
     end

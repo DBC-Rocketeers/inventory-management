@@ -2,6 +2,8 @@
   <div class="order-container">
   <% if @order.submitted == false %>
     <h2>Add an Entries</h2>
+  <% else @order.fulfilled == false %>
+    <h2>Submitted Entry</h2>
   <% end %>
   <div class="list-container">
 

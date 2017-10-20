@@ -41,7 +41,4 @@ class OrdersController < ApplicationController
     params.require(:entry).permit(:name, :number, :ordered_quantity)
   end
 
-  def submit_params
-    params.permit
-  end
 end
