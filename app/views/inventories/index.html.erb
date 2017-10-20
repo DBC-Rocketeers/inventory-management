@@ -1,19 +1,21 @@
 
-<div class="list-container warehouse-container">
-  <h2 class="warehouse-index-header">Inventory</h2>
+<div class="clipboard">
+  <div class="list-container">
+    <h2 class="warehouse-index-header">Inventory</h2>
 
-  <table class="inventory-table">
-    <tr>
-        <th>Part Name</th>
-        <th>Part Number</th>
-        <th>Quantity</th>
-    </tr>
-    <% @inventory.each do |entry| %>
-      <tr class="inventory-tr">
-        <th class="inventory-th"><%= entry.part.name %></th>
-        <th class="inventory-th"><%= entry.part.number %></th>
-        <th class="inventory-th"><%= entry.global_count %></th>
+    <table class="inventory-table">
+      <tr>
+          <th>Part Name</th>
+          <th>Part Number</th>
+          <th>Quantity</th>
       </tr>
-    <% end %>
-  </table>
+      <% @inventory.each do |entry| %>
+        <tr class="inventory-tr">
+          <th class="inventory-th"><%= entry.part.name %></th>
+          <th class="inventory-th"><%= entry.part.number %></th>
+          <th class="inventory-th"><%= entry.global_count %></th>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
