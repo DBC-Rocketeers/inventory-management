@@ -10,12 +10,24 @@
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,.05);
 }
 
-.inventory-table, .inventory-th {
-  border-collapse: collapse;
+.list-container {
+  padding-top: 20px;
 }
 
-.inventory-th {
-  background-color: rgba(128,128,128,.05);
+.list-container h2 {
+  padding: 15px 0;
+}
+
+.header-row {
+  font-size: 1.2em;
+}
+
+.header-th {
+  padding-bottom: 10px;
+}
+
+.inventory-table, .inventory-th {
+  border-collapse: collapse;
 }
 
 tr:nth-child(2) {
@@ -26,12 +38,18 @@ tr:last-child {
   border-bottom: 1px solid grey;}
 
 .inventory-th {
-  padding: 10px 0;
+  // padding: 14px 0;
   box-shadow:
-        inset 0px 11px 12px -10px #CCC,
-        inset 0px -11px 12px -10px #CCC;
+        inset 0px 11px 8px -10px grey,
+        inset 0px -11px 8px -10px grey;
+  line-height: 40px;
 }
 
+.inventory-tr {
+  background-color: #ededed;
+}
 
-
-.inventory-tr:hover {background-color: powderblue}
+.inventory-tr:hover {
+  background-color: powderblue;
+  font-style: italic;
+}
