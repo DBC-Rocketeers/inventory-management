@@ -4,4 +4,8 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.all.uniq {|entry| entry.part_id}
   end
 
+  def new
+    @order = Order.find[params[:id]]
+  end
+
 end
