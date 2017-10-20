@@ -5,8 +5,7 @@ RSpec.describe OrdersController, type: :controller do
     Employee.create(name: 'Admin', admin: true, employee_id: 1, password: 'password')
     session[:employee_id] = 1
 
-    seattle = Warehouse.create(name: "Seattle")
-    Order.create(warehouse: seattle)
+    Warehouse.create!(name: "Seattle")
   }
 
   describe "GET #new" do
@@ -27,9 +26,17 @@ RSpec.describe OrdersController, type: :controller do
   end
 
   describe "POST #create" do
+    it "responds with a status code of 302" do
+      post :create, { params: { order: { warehouse_id: 1 } } }
+      expect(response).to have_http_status 302
+    end
+  end
+
+  describe "GET #show" do
     it "responds with a status code of 200" do
-      post :create, { params: { order:{ warehouse: seattle } } }
-      expect(assigns(:order)).to be_a Order
+      Order.create!(warehouse_id: 1)
+      get :show, {params:{ id: 1 }}
+      expect(response).to have_http_status 200
     end
   end
 end
