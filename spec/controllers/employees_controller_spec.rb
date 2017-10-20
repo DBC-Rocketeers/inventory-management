@@ -23,7 +23,7 @@ RSpec.describe EmployeesController, type: :controller do
     end
   end
 
-  describe "GET #create" do
+  describe "POST #create" do
     it "responds with a status code of 200" do
       post :create, { params: { employee: { name: 'Admin', admin: true, employee_id: 1, password: 'password' } } }
       expect(response).to have_http_status 200
