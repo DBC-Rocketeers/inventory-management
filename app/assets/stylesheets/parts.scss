@@ -5,7 +5,7 @@
 .clipboard {
   width: 100%;
   height: 100vh;
-  background-color: #F8F5E1;
+  background-color: white;
   box-shadow: 0 0 15px darkgrey;
 }
 
@@ -29,17 +29,19 @@
   border-collapse: collapse;
 }
 
-tr:nth-child(2) {
-  border-top: 1px solid grey;
+tr {
+  border-top: 2px solid rgba(128,128,128, .3);
+  border-bottom: 2px solid rgba(128,128,128, .3);
 }
 
-tr:last-child {
-  border-bottom: 1px solid grey;}
+.header-row {
+  border-top: none;
+}
 
 .inventory-th {
-  box-shadow:
-        inset 0px 11px 8px -10px grey,
-        inset 0px -11px 8px -10px grey;
+  // box-shadow:
+  //       inset 0px 11px 8px -10px grey,
+  //       inset 0px -11px 8px -10px grey;
   line-height: 40px;
 }
 

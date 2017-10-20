@@ -15,12 +15,28 @@
  *= require_self
  */
 
+ /*:root {
+   --header-color: #2be6aa;
+   --background-color: #c6f7e6;
+   --form-color: #e8eaf6;
+   --submit-button: darkgrey;
+ }*/
+
+ :root {
+   --header-color: transparent;
+   --background-color: #333;
+   --form-color: #e8eaf6;
+   --submit-button: darkgrey;
+   --text: #333 ;
+ }
+
  body {
    font-family: 'Roboto', sans-serif;
-   background: #c6f7e6;
+   background: var(--background-color);
    margin: 0;
    padding: 0;
    width: 100%;
+   color: var(--text);
  }
 
  h1 {
@@ -44,7 +60,7 @@
  .register-container {
    max-width: 400px;
    margin: 0 auto;
-   background: #e8eaf6;
+   background: var(--form-color);
    padding: 2rem;
    box-shadow: 0 0 15px darkgrey;
  }
@@ -68,7 +84,7 @@ input[type=submit] {
   box-sizing: border-box;
   padding: 4px 0;
   width: 100%;
-  fill: darkgrey;
+  fill: var(--submit-button);
 }
 
 .flash-box{
@@ -93,7 +109,7 @@ input[type=submit] {
 
 .header {
   position: relative;
-  background: #2be6aa;
+  background: var(--header-color);
   padding: 5px 20px;
   height: 100px;
 }
