@@ -51,9 +51,10 @@ RSpec.describe OrdersController, type: :controller do
       expect(response).to have_http_status 302
     end
 
-    xit 'takes params to create an entry' do
+    it 'takes params to create an entry' do
       put :update, { params: { id: 1, part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } }
-      expect()
+      order = Order.find(1)
+      expect(order.entries.count).to eq 1
     end
   end
 end

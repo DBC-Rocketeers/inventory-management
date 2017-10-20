@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T00:51:06-07:00">2017-10-20T00:51:06-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T00:55:52-07:00">2017-10-20T00:55:52-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.1%</span></span>
+    (<span class="covered_percent"><span class="green">99.7%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.62
+         1.67
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>47</b> files in total.
-    <b>332</b> relevant lines. 
-    <span class="green"><b>329</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed </span>
+    <b>334</b> relevant lines. 
+    <span class="green"><b>333</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -74,10 +74,10 @@
         <td class="strong"><a href="#039d1e264a7c205921da7f2c569ac6737f966cf4" class="src_link" title="app/controllers/orders_controller.rb">app/controllers/orders_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>27</td>
-        <td>14</td>
-        <td>14</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -217,7 +217,7 @@
         <td>9</td>
         <td>8</td>
         <td>1</td>
-        <td>0.9</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -372,12 +372,12 @@
       
       <tr>
         <td class="strong"><a href="#96f72913bf940f639d95c89ee77dd1fb22e04e8c" class="src_link" title="spec/controllers/orders_controller_spec.rb">spec/controllers/orders_controller_spec.rb</a></td>
-        <td class="green strong">94.29 %</td>
-        <td>59</td>
-        <td>35</td>
-        <td>33</td>
-        <td>2</td>
-        <td>1.6</td>
+        <td class="green strong">100.0 %</td>
+        <td>60</td>
+        <td>36</td>
+        <td>36</td>
+        <td>0</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -777,8 +777,8 @@
     <h3>app/controllers/orders_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -888,20 +888,20 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
           
           <code class="ruby">    @order = Order.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    # @order.add_entry(name: params[:part_name], id: params[:part_id])</code>
+          <code class="ruby">    @order.add_entry(params[:part_name], params[:part_number], params[:ordered_quantity])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
           <code class="ruby">    redirect_to order_path(@order)</code>
         </li>
@@ -1682,14 +1682,14 @@
           <code class="ruby">  def add_entry(name, number, quantity)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    part = Part.find_by(number: number)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">    if part</code>
         </li>
@@ -1706,14 +1706,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">      part = Part.create(name: name, number: number)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="11">
+          <span class="hits">3</span>
           
           <code class="ruby">      Entry.create(order: self, part: part, ordered_quantity: quantity)</code>
         </li>
@@ -3133,11 +3133,11 @@
         <div class="source_table" id="96f72913bf940f639d95c89ee77dd1fb22e04e8c">
   <div class="header">
     <h3>spec/controllers/orders_controller_spec.rb</h3>
-    <h4><span class="green">94.29 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>35</b> relevant lines. 
-      <span class="green"><b>33</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>36</b> relevant lines. 
+      <span class="green"><b>36</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -3168,14 +3168,14 @@
           <code class="ruby">  before(:each) {</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="5">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
           
           <code class="ruby">    Employee.create(name: &#39;Admin&#39;, admin: true, employee_id: 1, password: &#39;password&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="6">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="6">
+          <span class="hits">8</span>
           
           <code class="ruby">    session[:employee_id] = 1</code>
         </li>
@@ -3186,14 +3186,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="8">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    Warehouse.create!(name: &quot;Seattle&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="9">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="9">
+          <span class="hits">8</span>
           
           <code class="ruby">    Order.create!(warehouse_id: 1)</code>
         </li>
@@ -3465,34 +3465,40 @@
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">    xit &#39;takes params to create an entry&#39; do</code>
+          <code class="ruby">    it &#39;takes params to create an entry&#39; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
-          
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
           
           <code class="ruby">      put :update, { params: { id: 1, part_name: &quot;Nose Cone&quot;, part_number: 1234, ordered_quantity: 2 } }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      expect()</code>
+          <code class="ruby">      order = Order.find(1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(order.entries.count).to eq 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>

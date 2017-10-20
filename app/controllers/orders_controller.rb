@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-    # @order.add_entry(name: params[:part_name], id: params[:part_id])
+    @order.add_entry(params[:part_name], params[:part_number], params[:ordered_quantity])
     redirect_to order_path(@order)
   end
 
