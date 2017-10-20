@@ -6,6 +6,7 @@ RSpec.describe OrdersController, type: :controller do
     session[:employee_id] = 1
 
     Warehouse.create!(name: "Seattle")
+    Order.create!(warehouse_id: 1)
   }
 
   describe "GET #new" do
@@ -39,7 +40,6 @@ RSpec.describe OrdersController, type: :controller do
 
   describe "GET #show" do
     it "responds with a status code of 200" do
-      Order.create!(warehouse_id: 1)
       get :show, {params:{ id: 1 }}
       expect(response).to have_http_status 200
     end
@@ -47,8 +47,13 @@ RSpec.describe OrdersController, type: :controller do
 
   describe 'PUT #update' do
     it "returns a 302 status" do
-      put :update, { params: { id: { part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } } }
+      put :update, { params: { id: 1, part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } }
       expect(response).to have_http_status 302
+    end
+
+    xit 'takes params to create an entry' do
+      put :update, { params: { id: 1, part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } }
+      expect()
     end
   end
 end

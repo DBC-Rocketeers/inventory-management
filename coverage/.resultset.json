@@ -260,6 +260,7 @@
         7,
         null,
         7,
+        7,
         null,
         null,
         1,
@@ -295,7 +296,6 @@
         1,
         1,
         1,
-        1,
         null,
         null,
         null,
@@ -303,6 +303,11 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        0,
+        0,
         null,
         null,
         null
@@ -326,6 +331,7 @@
         null,
         1,
         1,
+        null,
         1,
         null,
         null,
@@ -648,12 +654,29 @@
         1,
         null,
         1,
+        2,
+        2,
+        1,
+        1,
+        4,
+        null,
+        null,
         null
       ],
       "/Users/yihdego/Desktop/inventory-management/app/models/order.rb": [
         1,
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/yihdego/Desktop/inventory-management/spec/models/part_spec.rb": [
@@ -749,6 +772,6 @@
         null
       ]
     },
-    "timestamp": 1508484611
+    "timestamp": 1508485866
   }
 }
