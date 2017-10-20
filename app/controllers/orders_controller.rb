@@ -13,13 +13,6 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    # if @order.submitted == false
-    #   render 'order#show'
-    # elsif @order.fulfilled == false
-    #   render fufling
-    # else
-    #   render closed
-    # end
   end
 
   def update
@@ -27,8 +20,9 @@ class OrdersController < ApplicationController
     if params[:commit] == "Submit Order"
       @order.submitted = true
       @order.save
+    else
+      @order.add_entry(entry_params)
     end
-    @order.add_entry(entry_params)
     redirect_to order_path(@order)
   end
 

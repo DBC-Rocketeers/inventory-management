@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T15:19:29-07:00">2017-10-20T15:19:29-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T15:33:31-07:00">2017-10-20T15:33:31-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.74
+         1.72
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>47</b> files in total.
-    <b>348</b> relevant lines. 
-    <span class="green"><b>348</b> lines covered</span> and
+    <b>344</b> relevant lines. 
+    <span class="green"><b>344</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -223,19 +223,19 @@
       <tr>
         <td class="strong"><a href="#51826abaf097885855c12881cceb454db7ab8237" class="src_link" title="app/models/part.rb">app/models/part.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>9</td>
-        <td>9</td>
+        <td>14</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#6efbd4eebc5155e9007dcd0b5e3a89c44709c1fb" class="src_link" title="app/models/warehouse.rb">app/models/warehouse.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>9</td>
-        <td>6</td>
-        <td>6</td>
+        <td>10</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
         <td>1.3</td>
       </tr>
@@ -503,11 +503,11 @@
       <tr>
         <td class="strong"><a href="#829aff63cc00633435ced04ef44a04f333748b8a" class="src_link" title="spec/models/part_spec.rb">spec/models/part_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>36</td>
         <td>27</td>
-        <td>27</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -1848,8 +1848,8 @@
     <h3>app/models/part.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1881,49 +1881,61 @@
           <code class="ruby">  has_many :entries</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  validates :name, presence: true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">  validates :number, uniqueness: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def local_count(location)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">    warehouse = Warehouse.find_by(name: location)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
           <code class="ruby">    parts = warehouse.parts</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
           <code class="ruby">    parts_with_same_name = parts.where(name: self.name)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
           
           <code class="ruby">    parts_with_same_name.count</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -1939,8 +1951,8 @@
     <h3>app/models/warehouse.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1972,31 +1984,37 @@
           <code class="ruby">  has_many :orders</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :name, presence: true, uniqueness: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  def inventory</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
+        <li class="covered" data-hits="3" data-linenumber="8">
           <span class="hits">3</span>
           
           <code class="ruby">    @inventory = self.parts.uniq</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
@@ -3188,7 +3206,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  resources :warehouses, only: [:index, :show]</code>
+          <code class="ruby">  resources :warehouses, only: [:new, :create, :index, :show]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -4110,7 +4128,7 @@
         <li class="covered" data-hits="6" data-linenumber="14">
           <span class="hits">6</span>
           
-          <code class="ruby">    seattle.parts &lt;&lt; Part.create(name: &quot;Fuel Pump&quot;, number: 4567)</code>
+          <code class="ruby">    seattle.parts &lt;&lt; fuel = Part.create(name: &quot;Fuel Pump&quot;, number: 4567)</code>
         </li>
       
         <li class="covered" data-hits="6" data-linenumber="15">
@@ -4122,7 +4140,7 @@
         <li class="covered" data-hits="6" data-linenumber="16">
           <span class="hits">6</span>
           
-          <code class="ruby">    houston.parts &lt;&lt; Part.create(name: &quot;Fuel Pump&quot;, number: 4567)</code>
+          <code class="ruby">    houston.parts &lt;&lt; fuel</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -5260,8 +5278,8 @@
     <h3>spec/models/part_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>27</b> relevant lines. 
-      <span class="green"><b>27</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5287,52 +5305,52 @@
           <code class="ruby">RSpec.describe Part, type: :model do</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="4">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">    let!(:seattle) { Warehouse.create(name: &quot;Seattle&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    let!(:houston) { Warehouse.create(name: &quot;Houston&quot;) }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    let!(:nose) { Part.create(name: &quot;Nose Cone&quot;, number: 1234) }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="7">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    let!(:nose2) { Part.create(name: &quot;Nose Cone&quot;, number: 1234) }</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">    let!(:flux) { Part.create(name: &quot;Flux capacitor&quot;, number: 2345) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">describe &quot;methods&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">    it &#39;it returns the local count of multiple parts&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      seattle.parts &lt;&lt; nose</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
@@ -5344,43 +5362,43 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">      seattle.parts &lt;&lt; nose2</code>
+          <code class="ruby">      seattle.parts &lt;&lt; flux</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">      seattle.parts &lt;&lt; flux</code>
+          <code class="ruby">      nose.reload</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">      nose.reload</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
           <code class="ruby">      expect(nose.local_count(&quot;Seattle&quot;)).to eq 2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;returns the local count of a part thats in 2 locations&#39; do</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;it returns the local count for a different instances of a part&#39; do</code>
+          <code class="ruby">      seattle.parts &lt;&lt; nose</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
@@ -5392,25 +5410,25 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">      seattle.parts &lt;&lt; nose2</code>
+          <code class="ruby">      seattle.parts &lt;&lt; flux</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">      seattle.parts &lt;&lt; flux</code>
+          <code class="ruby">      houston.parts &lt;&lt; nose</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">      nose2.reload</code>
+          <code class="ruby">      nose.reload</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(nose2.local_count(&quot;Seattle&quot;)).to eq 2</code>
+          <code class="ruby">      expect(nose.local_count(&quot;Houston&quot;)).to eq 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
@@ -5422,64 +5440,10 @@
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39;returns the local count of a part thats in 2 locations&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      seattle.parts &lt;&lt; nose</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      seattle.parts &lt;&lt; nose2</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      seattle.parts &lt;&lt; flux</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      houston.parts &lt;&lt; nose</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="32">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      nose.reload</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="33">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(nose.local_count(&quot;Houston&quot;)).to eq 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
