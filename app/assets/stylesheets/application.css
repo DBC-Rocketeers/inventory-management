@@ -191,6 +191,13 @@ img{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
+  .main {
+    margin: 20px auto;
+  }
+
+  input {
+    border: 1px solid grey;
+  }
 
   .title-name,
   .log-large {
