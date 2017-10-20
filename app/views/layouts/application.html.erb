@@ -15,8 +15,8 @@
 
   <body>
     <div class="header">
-     <%= image_tag "rrl_logo.svg", class: "logo" %>
-     <h1 class="title-name">Rutherford Rocket Labs</h1>
+      <a href="/"><%= image_tag "rrl_logo.svg", class: "logo" %></a>
+     <h1>Rutherford Rocket Labs</h1>
      <% if current_employee %>
       <li class="menu-link logged-in-tag log-large">Logged in as <%= current_employee.name %></li>
      <% end %>
@@ -33,6 +33,8 @@
               <li><a href="#">receive</a></li> -->
               <% if current_employee %>
               <li><a class="menu-link" href="/">Inventory</a></li>
+              <li><a class="menu-link" href="/warehouses">Warehouses</a></li>
+              <li><a class="menu-link" href="/orders/new">New Order</a></li>
               <li><a class="menu-link" href="/employees/new">Register</a></li>
               <li class="menu-link logged-in-tag">Logged in as <%= current_employee.name %></li>
               <li><%= link_to "Logout", '/logout', class: "menu-link logout-link" %></li>
