@@ -7,6 +7,7 @@ RSpec.describe OrdersController, type: :controller do
 
     Warehouse.create!(name: "Seattle")
     Order.create!(warehouse_id: 1)
+    Part.create(name: "Nose Cone", number: 1234)
   }
 
   describe "GET #new" do
@@ -47,7 +48,7 @@ RSpec.describe OrdersController, type: :controller do
 
   describe 'PUT #update' do
     it "returns a 302 status" do
-      put :update, { params: { id: 1, part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } }
+      put :update, { params: { id: 1, name: "Nose Cone", number: 1234, ordered_quantity: 2 } }
       expect(response).to have_http_status 302
     end
 
