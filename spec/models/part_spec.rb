@@ -7,6 +7,7 @@ RSpec.describe Part, type: :model do
     let!(:nose2) { Part.create(name: "Nose Cone", number: 1234) }
     let!(:flux) { Part.create(name: "Flux capacitor", number: 2345) }
 
+describe "methods" do
     it 'it returns the local count of multiple parts' do
       seattle.parts << nose
       seattle.parts << nose2
