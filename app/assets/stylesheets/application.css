@@ -14,7 +14,7 @@
  *= require_self
  */
  body {
-   font-family: helvetica;
+   font-family: 'Roboto', sans-serif;
    background: #c6f7e6;
    margin: 0;
  }
@@ -24,28 +24,40 @@
    margin: 40px auto;
  }
 
+ .register-container {
+   width: 90%;
+   max-width: 400px;
+   margin: 0 auto;
+   background: #e8eaf6;
+   padding: 2rem;
+   box-shadow: 0 0 15px darkgrey;
+ }
+
 .employee-input {
-  background: #e8eaf6;
-  display: grid;
-  grid-template-columns: 400px;
-  max-width: 400px;
-  margin: 0 auto;
-  grid-gap: 20px;
-  padding: 2rem;
-  border-radius: 10px;
+  text-align: center;
 }
 
 .employee-input input {
+  box-sizing: border-box;
+  display: block;
   font-size: 1em;
-  padding: 0 1rem;
+  padding: 5px 1rem;
   line-height: 2.2rem;
-  border-radius: 5px;
+  margin: 10px 0;
+  width: 100%;
   border: none;
 }
 
 .employee-input h2 {
   margin: auto;
   font-size: 1.3rem;
+}
+
+input[type=submit] {
+  box-sizing: border-box;
+  padding: 4px 0;
+  width: 100%;
+  fill: darkgrey;
 }
 
 .flash-box{
