@@ -55,11 +55,16 @@ RSpec.describe WarehousesController, type: :controller do
       post :create, { params: { warehouse: { name: 'Seattle' } } }
       expect(response).to have_http_status 302
     end
+
     it "creates an instance of warehouse" do
       post :create, { params: { warehouse: { name: 'Seattle' } } }
       expect(assigns(:warehouse)).to be_a Warehouse
     end
 
+    it "redirects to the warehouses path" do
+      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      expect(response).to redirect_to(warehouses_path)
+    end
 
   end
 
