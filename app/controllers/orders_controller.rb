@@ -5,4 +5,8 @@ class OrdersController < ApplicationController
     @inventory = Part.all
   end
 
+  def index
+    @orders = Order.all
+  end
+
 end
