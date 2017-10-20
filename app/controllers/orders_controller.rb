@@ -25,7 +25,10 @@ class OrdersController < ApplicationController
   def update
     @order = Order.find(params[:id])
     # @order.add_entry(params)
-    @order.add_entry({name: params[:name], number: params[:number], quantity: params[:quantity]})
+    @order.add_entry(entry_params)
+    if params[:submit]
+      @order.submitted = true
+    end
     redirect_to order_path(@order)
   end
 
@@ -35,6 +38,9 @@ class OrdersController < ApplicationController
   end
 
   def entry_params
-    params.require(:entry).permit(:name, :number, :ordered_quantity)
+    entry = params.require(:entry).permit(:name, :number, :ordered_quantity)
+    p "*" * 50
+    p entry
+    entry
   end
 end
