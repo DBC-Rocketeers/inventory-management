@@ -7,8 +7,8 @@ class Order < ApplicationRecord
     if part
       Entry.create(order: self, part: part, ordered_quantity: [:quantity])
     else
-      part = Part.create(name: name, number: number)
-      Entry.create(order: self, part: part, ordered_quantity: quantity)
+      part = Part.create(name: args[:name], number: args[:number])
+      Entry.create(order: self, part: part, ordered_quantity: args[:quantity])
     end
   end
 end

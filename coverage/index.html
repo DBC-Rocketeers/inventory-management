@@ -14,18 +14,18 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T11:18:00-07:00">2017-10-20T11:18:00-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-10-20T11:42:36-07:00">2017-10-20T11:42:36-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.83%</span></span>
+    (<span class="covered_percent"><span class="green">99.71%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.66
+         1.69
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>47</b> files in total.
     <b>341</b> relevant lines. 
-    <span class="green"><b>337</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <span class="green"><b>340</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#3ab8356926fc72c6eaaa867cd07d75d427ac45d4" class="src_link" title="app/controllers/orders_controller.rb">app/controllers/orders_controller.rb</a></td>
         <td class="green strong">94.44 %</td>
-        <td>33</td>
+        <td>40</td>
         <td>18</td>
         <td>17</td>
         <td>1</td>
@@ -212,12 +212,12 @@
       
       <tr>
         <td class="strong"><a href="#de91d42e47603d1a224adfac2a8db19a532b45a3" class="src_link" title="app/models/order.rb">app/models/order.rb</a></td>
-        <td class="yellow strong">88.89 %</td>
+        <td class="green strong">100.0 %</td>
         <td>14</td>
         <td>9</td>
-        <td>8</td>
-        <td>1</td>
-        <td>1.1</td>
+        <td>9</td>
+        <td>0</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -372,11 +372,11 @@
       
       <tr>
         <td class="strong"><a href="#5ceb1cb7bfaf62dc0edc20ea2b868ba8ddca6186" class="src_link" title="spec/controllers/orders_controller_spec.rb">spec/controllers/orders_controller_spec.rb</a></td>
-        <td class="green strong">94.59 %</td>
+        <td class="green strong">100.0 %</td>
         <td>61</td>
         <td>37</td>
-        <td>35</td>
-        <td>2</td>
+        <td>37</td>
+        <td>0</td>
         <td>1.9</td>
       </tr>
       
@@ -497,7 +497,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>2.0</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -879,43 +879,43 @@
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    # if @order.submitted == false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    #   render &#39;order#show&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="18">
           
-          <code class="ruby">  def update</code>
+          
+          <code class="ruby">    # elsif @order.fulfilled == false</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">    @order = Order.find(params[:id])</code>
+          
+          <code class="ruby">    #   render fufling</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">    # @order.add_entry(params)</code>
+          <code class="ruby">    # else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="21">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="21">
           
-          <code class="ruby">    @order.add_entry({name: params[:name], number: params[:number], quantity: params[:quantity]})</code>
+          
+          <code class="ruby">    #   render closed</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="22">
           
-          <code class="ruby">    redirect_to order_path(@order)</code>
+          
+          <code class="ruby">    # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
@@ -933,52 +933,94 @@
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def order_params</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="27">
+        <li class="covered" data-hits="2" data-linenumber="26">
           <span class="hits">2</span>
           
-          <code class="ruby">    params.require(:order).permit(:name)</code>
+          <code class="ruby">    @order = Order.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">    # @order.add_entry(params)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="28">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @order.add_entry({name: params[:name], number: params[:number], quantity: params[:quantity]})</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    redirect_to order_path(@order)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">  def entry_params</code>
+          <code class="ruby">  private</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    params.require(:entry).permit(:name, :number, :ordered_quantity)</code>
+          <code class="ruby">  def order_params</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    params.require(:order).permit(:name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def entry_params</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">    params.require(:entry).permit(:name, :number, :ordered_quantity)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">end</code>
@@ -1677,11 +1719,11 @@
         <div class="source_table" id="de91d42e47603d1a224adfac2a8db19a532b45a3">
   <div class="header">
     <h3>app/models/order.rb</h3>
-    <h4><span class="yellow">88.89 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1718,20 +1760,20 @@
           <code class="ruby">  def add_entry(args)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    part = Part.find_by(number: args[:number])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="7">
+          <span class="hits">4</span>
           
           <code class="ruby">    if part</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">      Entry.create(order: self, part: part, ordered_quantity: [:quantity])</code>
         </li>
@@ -1742,16 +1784,16 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
-          <code class="ruby">      part = Part.create(name: name, number: number)</code>
+          <code class="ruby">      part = Part.create(name: args[:name], number: args[:number])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">      Entry.create(order: self, part: part, ordered_quantity: quantity)</code>
+          <code class="ruby">      Entry.create(order: self, part: part, ordered_quantity: args[:quantity])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -3116,7 +3158,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  resources :inventories, only: [:index]</code>
+          <code class="ruby">  resources :inventories, only: [:index, :new, :create]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -3169,11 +3211,11 @@
         <div class="source_table" id="5ceb1cb7bfaf62dc0edc20ea2b868ba8ddca6186">
   <div class="header">
     <h3>spec/controllers/orders_controller_spec.rb</h3>
-    <h4><span class="green">94.59 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>37</b> relevant lines. 
-      <span class="green"><b>35</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>37</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -3516,14 +3558,14 @@
           <code class="ruby">      put :update, { params: { id: 1, part_name: &quot;Nose Cone&quot;, part_number: 1234, ordered_quantity: 2 } }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
-          
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
           
           <code class="ruby">      order = Order.find(1)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
-          
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(order.entries.count).to eq 1</code>
         </li>
@@ -5094,10 +5136,10 @@
           <code class="ruby">    it &quot;creates a new entry&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="9">
+          <span class="hits">4</span>
           
-          <code class="ruby">      expect{ order.add_entry(&quot;Nose Cone&quot;, 1234, 2) }.to change{ order.entries.count }.by 1</code>
+          <code class="ruby">      expect{ order.add_entry({name: &quot;Nose Cone&quot;, number: 1234, quantity: 2}) }.to change{ order.entries.count }.by 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -5118,10 +5160,10 @@
           <code class="ruby">    it &quot;creates a new entry when a part already exists&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="13">
+          <span class="hits">4</span>
           
-          <code class="ruby">      expect{ order.add_entry(&quot;Flux capacitor&quot;, 2345, 1) }.to change{ order.entries.count }.by 1</code>
+          <code class="ruby">      expect{ order.add_entry({name: &quot;Flux capacitor&quot;, number: 2345, quantity: 1}) }.to change{ order.entries.count }.by 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
