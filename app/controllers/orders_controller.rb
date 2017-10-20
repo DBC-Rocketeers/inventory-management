@@ -10,8 +10,7 @@ class OrdersController < ApplicationController
     p order_params['name']
     warehouse = Warehouse.find_by(name: order_params['name'])
     @order = Order.create(warehouse: warehouse)
-
-    redirect_to 'orders#show'
+    redirect_to order_path(@order)
   end
 
 def show

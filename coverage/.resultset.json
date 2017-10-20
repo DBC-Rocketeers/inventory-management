@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/environment.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/application.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/application.rb": [
         1,
         null,
         1,
@@ -41,12 +41,12 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/boot.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/environments/test.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/environments/test.rb": [
         1,
         null,
         null,
@@ -90,7 +90,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/application_controller_renderer.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -100,7 +100,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/assets.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -116,7 +116,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/backtrace_silencers.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -125,20 +125,20 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/cookies_serializer.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/cookies_serializer.rb": [
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/inflections.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -156,13 +156,13 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/mime_types.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/initializers/wrap_parameters.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -178,7 +178,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/config/routes.rb": [
+      "/Users/yihdego/Desktop/inventory-management/config/routes.rb": [
         1,
         1,
         1,
@@ -190,31 +190,31 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/helpers/application_helper.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/helpers/employees_helper.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/helpers/employees_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/helpers/orders_helper.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/helpers/orders_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/helpers/parts_helper.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/helpers/parts_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/helpers/sessions_helper.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/helpers/warehouses_helper.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/helpers/warehouses_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/controllers/employees_controller.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/controllers/employees_controller.rb": [
         1,
         1,
         null,
@@ -237,7 +237,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/controllers/application_controller.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -251,7 +251,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/controllers/orders_controller_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/controllers/orders_controller_spec.rb": [
         1,
         null,
         1,
@@ -295,7 +295,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/controllers/orders_controller.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/controllers/orders_controller.rb": [
         1,
         null,
         1,
@@ -317,11 +317,12 @@
         null,
         null,
         1,
+        1,
         3,
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/controllers/parts_controller_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/controllers/parts_controller_spec.rb": [
         1,
         null,
         1,
@@ -357,7 +358,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/controllers/parts_controller.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/controllers/parts_controller.rb": [
         1,
         1,
         1,
@@ -366,7 +367,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/controllers/sessions_controller_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/controllers/sessions_controller_spec.rb": [
         1,
         null,
         1,
@@ -417,7 +418,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/controllers/sessions_controller.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -446,7 +447,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/controllers/warehouses_controller_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/controllers/warehouses_controller_spec.rb": [
         1,
         null,
         1,
@@ -499,7 +500,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/controllers/warehouses_controller.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/controllers/warehouses_controller.rb": [
         1,
         1,
         1,
@@ -512,7 +513,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/helpers/employees_helper_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/helpers/employees_helper_spec.rb": [
         1,
         null,
         null,
@@ -528,7 +529,7 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/helpers/orders_helper_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/helpers/orders_helper_spec.rb": [
         1,
         null,
         null,
@@ -545,7 +546,7 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/helpers/parts_helper_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/helpers/parts_helper_spec.rb": [
         1,
         null,
         null,
@@ -561,7 +562,7 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/helpers/sessions_helper_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/helpers/sessions_helper_spec.rb": [
         1,
         null,
         null,
@@ -577,7 +578,7 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/helpers/warehouses_helper_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/helpers/warehouses_helper_spec.rb": [
         1,
         null,
         null,
@@ -593,13 +594,13 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/employee_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/models/employee_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/employee.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/models/employee.rb": [
         1,
         1,
         1,
@@ -607,25 +608,25 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/application_record.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/entry_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/models/entry_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/entry.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/models/entry.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/inventory_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/models/inventory_spec.rb": [
         1,
         null,
         1,
@@ -657,7 +658,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/inventory.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/models/inventory.rb": [
         1,
         1,
         1,
@@ -667,20 +668,20 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/order_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/models/order_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/order.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/models/order.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/part_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/models/part_spec.rb": [
         1,
         null,
         1,
@@ -718,7 +719,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/part.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/models/part.rb": [
         1,
         1,
         1,
@@ -732,7 +733,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/spec/models/warehouse_spec.rb": [
+      "/Users/yihdego/Desktop/inventory-management/spec/models/warehouse_spec.rb": [
         1,
         null,
         1,
@@ -761,7 +762,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/client-project-challenge/rocket-labs/app/models/warehouse.rb": [
+      "/Users/yihdego/Desktop/inventory-management/app/models/warehouse.rb": [
         1,
         1,
         1,
@@ -773,6 +774,6 @@
         null
       ]
     },
-    "timestamp": 1508476874
+    "timestamp": 1508482670
   }
 }
