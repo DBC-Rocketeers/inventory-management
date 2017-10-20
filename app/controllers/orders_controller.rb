@@ -6,16 +6,18 @@ class OrdersController < ApplicationController
   end
 
   def create
-    p order_params
-    p order_params['name']
     warehouse = Warehouse.find_by(name: order_params['name'])
     @order = Order.create(warehouse: warehouse)
     redirect_to order_path(@order)
   end
 
-def show
+  def show
+  end
 
-end
+  def update
+    @order = params[:id]
+    redirect_to order_path(@order)
+  end
 
   private
   def order_params

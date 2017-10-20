@@ -27,8 +27,13 @@ RSpec.describe OrdersController, type: :controller do
 
   describe "POST #create" do
     it "responds with a status code of 302" do
-      post :create, { params: { order: { warehouse_id: 1 } } }
+      post :create, { params: { order: { name: "Seattle" } } }
       expect(response).to have_http_status 302
+    end
+
+    it "creates an instance of order" do
+      get :create, { params: { order: { name: "Seattle" } } }
+      expect(assigns(:order)).to be_a Order
     end
   end
 
@@ -37,6 +42,13 @@ RSpec.describe OrdersController, type: :controller do
       Order.create!(warehouse_id: 1)
       get :show, {params:{ id: 1 }}
       expect(response).to have_http_status 200
+    end
+  end
+
+  describe 'PUT #update' do
+    it "returns a 302 status" do
+      put :update, { params: { id: { part_name: "Nose Cone", part_number: 1234, ordered_quantity: 2 } } }
+      expect(response).to have_http_status 302
     end
   end
 end
