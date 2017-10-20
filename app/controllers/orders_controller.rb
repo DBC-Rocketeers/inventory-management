@@ -13,6 +13,13 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    # if @order.submitted == false
+    #   render 'order#show'
+    # elsif @order.fulfilled == false
+    #   render fufling
+    # else
+    #   render closed
+    # end
   end
 
   def update

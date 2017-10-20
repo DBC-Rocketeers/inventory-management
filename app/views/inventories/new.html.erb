@@ -1,0 +1,8 @@
+<% @order.entries.each do |entry| %>
+  <form class="" action="index.html" method="post">
+    <span> <%= entry.part.number %> </span>
+    <span> <%= entry.part.name %> </span>
+    <input type="text" name="quantity[<%= entry.part.number %>]" value="entry.ordered_quantity">
+    <input type="checkbox" name="confirm[<%= entry.part.number %>]">
+  </form>
+  <% end %>

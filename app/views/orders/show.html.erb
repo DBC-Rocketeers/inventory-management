@@ -14,3 +14,10 @@
   <%= f.text_field :ordered_quantity %>
   <%= f.submit 'Submit Order' %>
 <% end %>
+<% if @order.submitted %>
+  <h3>Order #<%= @order.id %> </h3>
+  <p><%= @order.warehouse.name %></p>
+  <% @order.entries.each do |entry| %>
+    <p><%= entry.part.name %> - <%= entry.ordered_quantity %> </p>
+  <% end %>
+<% end %>
