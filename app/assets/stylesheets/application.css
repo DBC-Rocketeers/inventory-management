@@ -23,6 +23,14 @@
    width: 100%;
  }
 
+ h1 {
+   font-size: 1.7em;
+ }
+
+ h2 {
+   font-size: 1.4em;
+ }
+
  li {
    list-style: none;
  }
@@ -54,10 +62,6 @@
   margin: 10px 0;
   width: 100%;
   border: none;
-}
-
-.employee-input h2 {
-  font-size: 1.3rem;
 }
 
 input[type=submit] {
@@ -103,7 +107,6 @@ input[type=submit] {
   color: white;
   top: 20%;
   left: 20%;
-  font-size: 1.7em;
 }
 
 .logged-in-tag {
@@ -114,7 +117,7 @@ input[type=submit] {
 
 .burger-container {
   position: absolute;
-  right: 10%;
+  right: 5%;
   top: 10px;
   z-index: 11;
 }
@@ -128,7 +131,7 @@ input[type=submit] {
 }
 
 .bar-top {
-  transform: rotate(45deg) translate(12px, 6px);
+  transform: rotate(45deg) translate(14px, 9px);
 }
 
 .bar-middle {
@@ -136,7 +139,7 @@ input[type=submit] {
 }
 
 .bar-bottom {
-  transform: rotate(-45deg) translate(10px,-5px);
+  transform: rotate(-45deg) translate(6px,-3px);
 }
 
 .nav-wrap {
