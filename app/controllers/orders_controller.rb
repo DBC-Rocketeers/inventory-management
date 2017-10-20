@@ -6,17 +6,19 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
-    @order.save
+    p order_params
+    p order_params['name']
+    warehouse = Warehouse.find_by(name: order_params['name'])
+    @order = Order.create(warehouse: warehouse)
+
     redirect_to 'orders#show'
   end
 
 def show
-  
+
 end
 
-  private
   def order_params
-    params.require(:order).permit(:warehouse_id)
+    params.require(:order).permit(:name)
   end
 end
