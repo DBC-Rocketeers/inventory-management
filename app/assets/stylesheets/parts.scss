@@ -38,7 +38,6 @@ tr:last-child {
   border-bottom: 1px solid grey;}
 
 .inventory-th {
-  // padding: 14px 0;
   box-shadow:
         inset 0px 11px 8px -10px grey,
         inset 0px -11px 8px -10px grey;
@@ -52,4 +51,18 @@ tr:last-child {
 .inventory-tr:hover {
   background-color: powderblue;
   font-style: italic;
+}
+
+/*small phone*/
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .header-row {
+      font-size: 1em;
+    }
+
+
 }

@@ -10,22 +10,26 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_tree .
  *= require_self
  */
+
  body {
    font-family: 'Roboto', sans-serif;
    background: #c6f7e6;
    margin: 0;
+   padding: 0;
+   width: 100%;
  }
 
  .main {
    width: 90%;
+   max-width: 650px;
    margin: 40px auto;
  }
 
  .register-container {
-   width: 90%;
    max-width: 400px;
    margin: 0 auto;
    background: #e8eaf6;
@@ -49,7 +53,6 @@
 }
 
 .employee-input h2 {
-  margin: auto;
   font-size: 1.3rem;
 }
 
@@ -84,14 +87,13 @@ input[type=submit] {
   background: #2be6aa;
   padding: 5px 20px;
   height: 100px;
-  width: 100%;
 }
 
 .logo {
   padding: 0 0 0 5%;
 }
 
-.header h1 {
+.title-name {
   position: absolute;
   color: white;
   top: 20%;
@@ -142,6 +144,7 @@ input[type=submit] {
   z-index: 10;
   transition: .25s;
   box-shadow: 0 0 15px 2px grey;
+  overflow: hidden;
 }
 
 .slide {
@@ -173,4 +176,22 @@ img{
   left: 2.5%;
   top: 15px;
   height: 80px;
+}
+
+/*******************MEDIA QUERIES*********************/
+/*small phone*/
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  body {
+    background-color: blue;
+  }
+
+  .title-name,
+  .log-large {
+    display: none;
+  }
 }
