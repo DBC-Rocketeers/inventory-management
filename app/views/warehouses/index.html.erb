@@ -1,0 +1,6 @@
+<% @warehouses.each do |warehouse| %>
+<div class="list-container warehouse-container">
+  <h2 class="warehouse-index-header"><%= warehouse.name %></h2>
+    <%= render partial: "show", layout: false, locals: { inventory: warehouse.inventory, location: warehouse.name } %>
+</div>
+<% end %>
