@@ -1,0 +1,12 @@
+
+<%= form_for :order, method: (:post) do |f| %>
+  <label for="">Warehouse Location:</label>
+  <%= f.collection_select :name, @warehouse, :id, :name %>
+  <label for="">Part Name:</label>
+  <%= f.text_field :name %>
+  <label for="">Part Number:</label>
+  <%= f.text_field :number %>
+  <label for="">Count:</label>
+  <%= f.text_field :count %>
+  <%= f.submit 'Place Order' %>
+<% end %>
