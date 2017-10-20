@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019221747) do
+ActiveRecord::Schema.define(version: 20171020031423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20171019221747) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "entries", force: :cascade do |t|
+    t.bigint "order_id"
+    t.integer "ordered_quantity"
+    t.integer "received_quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_entries_on_order_id"
+  end
+
   create_table "inventories", force: :cascade do |t|
     t.bigint "part_id"
     t.bigint "warehouse_id"
@@ -34,8 +43,10 @@ ActiveRecord::Schema.define(version: 20171019221747) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.bigint "warehouse_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["warehouse_id"], name: "index_orders_on_warehouse_id"
   end
 
   create_table "parts", force: :cascade do |t|
@@ -51,6 +62,8 @@ ActiveRecord::Schema.define(version: 20171019221747) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "entries", "orders"
   add_foreign_key "inventories", "parts"
   add_foreign_key "inventories", "warehouses"
+  add_foreign_key "orders", "warehouses"
 end
