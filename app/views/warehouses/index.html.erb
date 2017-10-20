@@ -2,7 +2,7 @@
   <div class="list-container">
     <div class="h2-container">
       <h2 class="warehouse-index-header">Inventory By Warehouse</h2>
-    <%= link_to "Add New Warehouse", action: "new" %>
+    <%= link_to "Add New Warehouse", action: "new", id:'new-warehouse-button' %>
     </div>
     <% @warehouses.each do |warehouse| %>
     <div class="warehouse-container">
