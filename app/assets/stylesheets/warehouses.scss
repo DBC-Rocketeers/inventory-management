@@ -20,3 +20,25 @@
 .inventory-th {
   padding-bottom: 5px;
 }
+
+.h2-container {
+  position: relative;
+  padding-top: 20px;
+}
+#new-warehouse-button {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  right: 5%;
+  border: 1px solid grey;
+}
+
+.warehouse-container {
+  margin-bottom: 30px;
+}
+
+.warehouse-container h3 {
+  text-align: left;
+  display: inline-block;
+  margin-left: 10%;
+}

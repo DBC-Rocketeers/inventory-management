@@ -1,10 +1,12 @@
 <div class="clipboard">
   <div class="list-container">
-    <h2 class="warehouse-index-header">Inventory By Warehouse</h2>
-
+    <div class="h2-container">
+      <h2 class="warehouse-index-header">Inventory By Warehouse</h2>
+      <button id="new-warehouse-button" type="submit">Create A New Warehouse</button>
+    </div>
     <% @warehouses.each do |warehouse| %>
     <div class="warehouse-container">
-      <h2 class="warehouse-index-header"><%= warehouse.name %></h2>
+      <h3 class="warehouse-index-header"><%= warehouse.name %></h2>
         <%= render partial: "show", layout: false, locals: { inventory: warehouse.inventory, location: warehouse.name } %>
     </div>
     <% end %>

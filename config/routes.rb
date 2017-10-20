@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :orders
   resources :inventories, only: [:index, :new, :create]
-  resources :warehouses, only: [:index, :show]
+  resources :warehouses, only: [:new, :create, :index, :show]
   resource :employees, only: [:create, :new]
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
