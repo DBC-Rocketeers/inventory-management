@@ -10,8 +10,11 @@ class OrdersController < ApplicationController
   end
 
   def show
-    p params
     @order = Order.find(params[:id])
   end
+
+
+
+
 
 end

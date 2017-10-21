@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :orders, only: [:new, :index, :show]
-  resources :inventories, only: [:index, :new, :create]
+  resources :orders
+  resources :inventories
   resources :warehouses, only: [:index, :show]
   resource :employees, only: [:create, :new]
   get '/login' => 'sessions#new'

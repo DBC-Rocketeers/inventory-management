@@ -23,9 +23,9 @@ warehouses_locations = [seattle, houston]
   Order.create!(warehouse: warehouses_locations.sample)
 end
 
-rocket_parts = {'1212': 'Shock Cord Mount','3424':  'Parachute','12565612':  'Shroud lines','6542':  'Recovery Wadding','12906312':  'Body Tube','5225':  'Launch Lug','75785':  'Fins','5356':  'Engine Block','8757':  'Rocket Engine','957464':  'Igniter'}
+rocket_parts = {'Shock Cord Mount': 13253, 'Parachute': 53453,'Shroud lines': 12144322,'Recovery Wadding': 22342,'Body Tube': 854,'Launch Lug': 13455, 'Fins': 967765,'Engine Block': 1242412,'Rocket Engine': 136,'Igniter': 745376}
 
-rocket_parts.each do |code, name|
+rocket_parts.each do |name, code|
   Part.create!(name: name, number: code)
 end
 
