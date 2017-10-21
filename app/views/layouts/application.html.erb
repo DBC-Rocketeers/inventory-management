@@ -36,10 +36,10 @@
               <li><a class="menu-link" href="/warehouses">Warehouses</a></li>
               <li><a class="menu-link" href="/orders/new">New Order</a></li>
               <li><a class="menu-link" href="/orders">All Orders</a></li>
-              <li><a class="menu-link" href="/employees/new">Register</a></li>
               <li class="menu-link logged-in-tag">Logged in as <%= current_employee.name %></li>
               <li><%= link_to "Logout", '/logout', class: "menu-link logout-link" %></li>
               <% else %>
+              <li><a class="menu-link" href="/employees/new">Register</a></li>
               <li><a class="menu-link" href="/">Login</a></li>
               <% end %>
             </ul>

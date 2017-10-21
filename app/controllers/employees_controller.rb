@@ -1,5 +1,4 @@
 class EmployeesController < ApplicationController
-  before_action :authorize
 
   def create
     @employee = Employee.new(employee_params)
