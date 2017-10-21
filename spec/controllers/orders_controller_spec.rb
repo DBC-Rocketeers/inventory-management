@@ -10,6 +10,17 @@ RSpec.describe OrdersController, type: :controller do
     Part.create(name: "Nose Cone", number: 1234)
   }
 
+  describe 'GET #index' do
+    it 'responds with a status code of 200' do
+      get :index
+      expect(response).to have_http_status 200
+    end
+
+    it "creates an array of warehouse instances" do
+      get :index
+      expect(assigns(:orders)).to be_a ActiveRecord::Relation
+    end
+  end
   describe "GET #new" do
     it "responds with a status code of 200" do
       get :new

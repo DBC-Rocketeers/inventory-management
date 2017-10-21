@@ -103,7 +103,7 @@ input[type=submit] {
 
 .header {
   position: relative;
-  background: var(--header-color);
+  background: white;
   padding: 5px 20px;
   height: 100px;
 }
