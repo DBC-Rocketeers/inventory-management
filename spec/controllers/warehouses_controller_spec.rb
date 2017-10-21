@@ -66,6 +66,16 @@ RSpec.describe WarehousesController, type: :controller do
       expect(response).to redirect_to(warehouses_path)
     end
 
+    it 'sets a flash notice upon success' do
+      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      expect(flash[:notice]).to match ["You have successfully added new warehouse in Seattle."]
+    end
+
+    it 'sets a flash notice upon failure' do
+      post :create, { params: { warehouse: { name: '' } } }
+      expect(flash[:alert]).to match ["Name can't be blank"]
+    end
+
   end
 
 

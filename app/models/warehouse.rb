@@ -1,7 +1,10 @@
 class Warehouse < ApplicationRecord
+
   has_many :inventories
   has_many :parts, through: :inventories
   has_many :orders
+
+  validates :name, presence: true
 
 
   def inventory
