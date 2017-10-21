@@ -24,13 +24,16 @@
 .h2-container {
   position: relative;
   padding-top: 20px;
+  margin: 10px auto;
 }
-#new-warehouse-button {
-  position: absolute;
-  top: 0;
-  width: 150px;
-  right: 5%;
+
+
+.new-warehouse-link {
   border: 1px solid grey;
+  padding: 15px 10px;
+  text-decoration: none;
+  background: #28ABFC;
+  margin-left: 413px;
 }
 
 .warehouse-container {

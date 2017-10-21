@@ -140,6 +140,7 @@ input[type=submit] {
   transition: .2s;
 }
 
+
 .bar-top {
   transform: rotate(45deg) translate(14px, 9px);
 }

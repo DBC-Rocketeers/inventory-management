@@ -32,6 +32,56 @@ RSpec.describe WarehousesController, type: :controller do
     end
   end
 
+  describe "GET #new" do
+    it "responds with a status code of 200" do
+      get :new
+      expect(response).to have_http_status 200
+    end
+
+    it "creates an instance of warehouse" do
+      get :new
+      expect(assigns(:warehouse)).to be_a Warehouse
+    end
+
+    it "renders the new template" do
+      get :new
+      expect(response).to render_template(:new)
+    end
+  end
+
+
+  describe "POST #create" do
+    it "responds with a status code of 302" do
+      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      expect(response).to have_http_status 302
+    end
+
+    it "creates an instance of warehouse" do
+      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      expect(assigns(:warehouse)).to be_a Warehouse
+    end
+
+    it "redirects to the warehouses path" do
+      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      expect(response).to redirect_to(warehouses_path)
+    end
+
+    it 'sets a flash notice upon success' do
+      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      expect(flash[:notice]).to match ["You have successfully added new warehouse in Seattle."]
+    end
+
+    it 'sets a flash notice upon failure' do
+      post :create, { params: { warehouse: { name: '' } } }
+      expect(flash[:alert]).to match ["Name can't be blank"]
+    end
+
+  end
+
+
+
+
+
   describe "GET #show" do
     it "responds with a status code of 200" do
       get :show, { params: { id: 1 } }

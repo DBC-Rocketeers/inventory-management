@@ -2,8 +2,10 @@
   <div class="list-container">
     <div class="h2-container">
       <h2 class="warehouse-index-header">Inventory By Warehouse</h2>
-      <button id="new-warehouse-button" type="submit">Create A New Warehouse</button>
     </div>
+      <div class="new-warehouse-div">
+        <%= link_to "Add New Warehouse",{ action: "new"}, :class => 'new-warehouse-link' %>
+      </div>
     <% @warehouses.each do |warehouse| %>
     <div class="warehouse-container">
       <h3 class="warehouse-index-header"><%= warehouse.name %></h2>
