@@ -1,3 +1,6 @@
+<div class="order-form">
+
+
 <% @order.entries.each do |entry| %>
   <form class="" action="index.html" method="post">
     <span> <%= entry.part.number %> </span>
@@ -6,3 +9,4 @@
     <input type="checkbox" name="confirm[<%= entry.part.number %>]">
   </form>
   <% end %>
+</div>

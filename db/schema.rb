@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20171020032533) do
 
   create_table "orders", force: :cascade do |t|
     t.bigint "warehouse_id"
+    t.boolean "submitted", default: false
+    t.boolean "fulfilled", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["warehouse_id"], name: "index_orders_on_warehouse_id"

@@ -12,7 +12,6 @@ class EmployeesController < ApplicationController
   end
 
   def new
-    @employee = Employee.new
   end
 
   private
