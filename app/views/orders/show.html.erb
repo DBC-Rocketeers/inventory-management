@@ -1,5 +1,18 @@
 <h3>Order #<%= @order.id %> </h3>
-<p><%= @order.warehouse.name %></p>
-<% @order.entries.each do |entry| %>
-<p><%= entry.part.name %> - <%= entry.ordered_quantity %> </p>
-<% end %>
+<h4>Location: <%= @order.warehouse.name %></h4>
+<table class="inventory-table">
+  <tr>
+      <th>Part Name</th>
+      <th>Part Number</th>
+      <th>Quantity</th>
+  </tr>
+  <% @order.entries.each do |entry| %>
+    <tr class="inventory-tr">
+      <th class="inventory-th"><%= entry.part.name %></th>
+      <th class="inventory-th"><%= entry.part.number %></th>
+      <th class="inventory-th"><%= entry.ordered_quantity %></th>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'receive order', edit_inventory_url %>
