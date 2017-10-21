@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   resources :orders
   resources :inventories
   resources :warehouses, only: [:new, :create, :index, :show]

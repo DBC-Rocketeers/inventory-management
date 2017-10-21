@@ -1,3 +1,8 @@
+
+<% if @order.submitted == true %>
+<div class="order-form">
+
+
 <h3>Order #<%= @order.id %> </h3>
 <h4>Location: <%= @order.warehouse.name %></h4>
 <table class="inventory-table">
@@ -16,3 +21,56 @@
 </table>
 
 <%= link_to 'receive order', edit_inventory_url %>
+</div>
+<% else %>
+
+<div class="clipboard">
+  <div class="order-container">
+
+    <h2>Add an Entries</h2>
+
+
+  <div class="list-container">
+
+  <% if @order.submitted == false %>
+    <% if @order.entries.length > 0 %>
+      <table class="inventory-table">
+        <tr class="header-row">
+            <th class="header-th">Part Name</th>
+            <th class="header-th">Part Number</th>
+            <th class="header-th">Quantity</th>
+        </tr>
+        <% @order.entries.each do |entry| %>
+        <tr class="inventory-tr">
+          <th class="inventory-th"><%= entry.part.name %></th>
+          <th class="inventory-th"><%= entry.part.number %></th>
+          <th class="inventory-th"><%= entry.ordered_quantity %></th>
+        </tr>
+        <% end %>
+      </table>
+      <% end %>
+    <%= form_for :entry, url: order_path(@order), method: (:put), html: { class: "order-form" } do |f| %>
+      <label for="">Part Name:</label>
+      <%= f.text_field :name %>
+      <label for="">Part Number:</label>
+      <%= f.text_field :number %>
+      <label for="">Count:</label>
+      <%= f.number_field :ordered_quantity %>
+      <%= f.submit 'Add to Order' %>
+      <%= f.submit 'Submit Order' %>
+    <% end %>
+  <% end %>
+
+  <% if @order.submitted %>
+    <h3>Order #<%= @order.id %> </h3>
+    <p><%= @order.warehouse.name %></p>
+    <% @order.entries.each do |entry| %>
+      <ul>
+        <li><%= entry.part.name %> - <%= entry.ordered_quantity %> </li>
+      </ul>
+    <% end %>
+  <% end %>
+  </div>
+  </div>
+</div>
+<% end %>

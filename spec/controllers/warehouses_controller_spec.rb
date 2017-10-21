@@ -11,9 +11,9 @@ RSpec.describe WarehousesController, type: :controller do
     seattle.parts << Part.create(name: "Nose Cone", number: 1234)
     seattle.parts << Part.create(name: "Flux capacitor", number: 2345)
     seattle.parts << Part.create(name: "Oxidizer", number: 3456)
-    seattle.parts << Part.create(name: "Fuel Pump", number: 4567)
+    seattle.parts << fuel = Part.create(name: "Fuel Pump", number: 4567)
     houston.parts << Part.create(name: "Space Recliners", number: 5678)
-    houston.parts << Part.create(name: "Fuel Pump", number: 4567)
+    houston.parts << fuel
   }
   describe "GET #index" do
     it "responds with a status code of 200" do

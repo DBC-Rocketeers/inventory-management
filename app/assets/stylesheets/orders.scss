@@ -30,3 +30,12 @@
   width: 50%;
   fill: blue;
 }
+
+.order-form {
+  max-width: 600px;
+  min-width: 200px;
+  margin: 0 auto;
+  background: var(--form-color);
+  padding: 2rem;
+  box-shadow: 0 0 15px var(--shadow);
+}
