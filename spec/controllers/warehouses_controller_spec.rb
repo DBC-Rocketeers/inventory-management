@@ -52,7 +52,7 @@ RSpec.describe WarehousesController, type: :controller do
 
   describe "POST #create" do
     it "responds with a status code of 302" do
-      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      post :create, { params: { warehouse: { name: 'Sterling' } } }
       expect(response).to have_http_status 302
     end
 
@@ -62,13 +62,13 @@ RSpec.describe WarehousesController, type: :controller do
     end
 
     it "redirects to the warehouses path" do
-      post :create, { params: { warehouse: { name: 'Seattle' } } }
+      post :create, { params: { warehouse: { name: 'Sterling' } } }
       expect(response).to redirect_to(warehouses_path)
     end
 
     it 'sets a flash notice upon success' do
-      post :create, { params: { warehouse: { name: 'Seattle' } } }
-      expect(flash[:notice]).to match ["You have successfully added new warehouse in Seattle."]
+      post :create, { params: { warehouse: { name: 'Los Angeles' } } }
+      expect(flash[:notice]).to match ["You have successfully added new warehouse in Los Angeles."]
     end
 
     it 'sets a flash notice upon failure' do
@@ -77,8 +77,6 @@ RSpec.describe WarehousesController, type: :controller do
     end
 
   end
-
-
 
 
 
